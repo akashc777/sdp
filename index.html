@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <link href="style.css" rel="stylesheet" />
+    <meta charset="utf-8">
+    <title>answer1_set1</title>
+  </head>
+  <body >
+    <h1>Set 1</h1>
+    <h2>Answer 1</h2>
+    <h3>The C code is :</h3>
+    <pre>
+    <code>
+    #include <stdio.h>
+    int main() {
+      int number, i;
+      scanf("%d", &number);
+      for (i = 1; i <= number; ++i) {
+        if (number % i == 0) {
+          printf("%d ", i);
+        }
+      }
+      return 0;
+    }
+  </code>
+  </pre>
+    <h3>The python code is :</h3>
+    <pre>
+    <code>
+    n = int(input('Enter an int value\n'))
+    for i in range(1,n+1):
+        if n%i == 0 :
+            print(i)
+    </code>
+    </pre>
+
+    <h1>Set 1</h1>
+    <h2>Answer 2</h2>
+    <h3>The C code is :</h3>
+    <pre>
+    <code>
+      #include <stdio.h>
+      int main() {
+        int number, originalNumber, remainder, result = 0;
+
+        printf("Enter a three digit integer: ");
+        scanf("%d", &number);
+
+        originalNumber = number;
+
+        while (originalNumber != 0) {
+          remainder = originalNumber % 10;
+          result += remainder * remainder * remainder;
+          originalNumber /= 10;
+        }
+
+        if (result == number)
+          printf("%d is an Armstrong number.", number);
+        else
+          printf("%d is not an Armstrong number.", number);
+
+        return 0;
+      }
+
+  </code>
+  </pre>
+    <h3>The python code is :</h3>
+    <pre>
+    <code>
+      n = int(input('Enter a three digit integer: '))
+      temp = n
+      result = 0
+      while temp != 0:
+          remainder = temp % 10
+          result += remainder ** 3
+          temp //= 10
+
+      print(result)
+      if n == result:
+         print(n,"is an Armstrong number")
+      else:
+         print(n,"is not an Armstrong number")
+
+    </code>
+    </pre>
+
+
+    <h1>Set 1</h1>
+    <h2>Answer 3</h2>
+    <h3>The C code is :</h3>
+    <pre>
+    <code>
+      #include <stdio.h>
+      int main() {
+        long long n;
+        int count = 0;
+
+        printf("Enter an integer: ");
+        scanf("%lld", &n);
+
+        while (n != 0) {
+          // n = n/10
+          n /= 10;
+          ++count;
+        }
+        printf("The count: %d\n", count);
+        return 0;
+      }
+
+  </code>
+  </pre>
+    <h3>The python code is :</h3>
+    <pre>
+    <code>
+      n = int(input('Enter an Integer : '))
+      if n != 0:
+          print('The count : {}'.format(len(str(abs(n)))))
+      else:
+          print('The count : 0')
+
+    </code>
+    </pre>
+
+
+    <h1>Set 2</h1>
+    <h2>Answer 1</h2>
+    <h3>The C code is :</h3>
+    <pre>
+    <code>
+      #include <stdio.h>
+      int main() {
+        int n1 = 0, n2 = 1, n3, i, number;
+        printf("Enter the number of elements:");
+        scanf("%d", &number);
+        printf("\n%d %d", n1, n2);
+        for (i = 2; i < number; ++i) {
+          n3 = n1 + n2;
+          printf(" %d", n3);
+          n1 = n2;
+          n2 = n3;
+        }
+        return 0;
+      }
+
+  </code>
+  </pre>
+    <h3>The python code is :</h3>
+    <pre>
+    <code>
+      fibonacci_numbers = [0, 1]
+
+      n = int(input("Enter the number of elements:"))
+
+      for i in range(2,n):
+          fibonacci_numbers.append(fibonacci_numbers[i-1]+fibonacci_numbers[i-2])
+
+      print(','.join(str(x) for x in fibonacci_numbers))
+
+    </code>
+    </pre>
+
+
+    <h1>Set 2</h1>
+    <h2>Answer 2</h2>
+    <h3>The C code is :</h3>
+    <pre>
+    <code>
+    #include <stdio.h>
+    int main() {
+      int rows, i, j, space;
+
+      printf("Enter number of rows: ");
+      scanf("%d", &rows);
+
+      for (i = rows; i >= 1; --i) {
+        for (space = 0; space < rows - i; ++space)
+          printf("  ");
+
+        for (j = i; j <= 2 * i - 1; ++j)
+          printf("* ");
+
+        for (j = 0; j < i - 1; ++j)
+          printf("* ");
+
+        printf("\n");
+      }
+
+      return 0;
+    }
+
+  </code>
+  </pre>
+    <h3>The python code is :</h3>
+    <pre>
+    <code>
+      n = int(input('Enter number of rows: '))
+      for i in range(0,n):
+          print(i * '  ' + (2*(n-i)-1) * '* ')
+
+    </code>
+    </pre>
+
+
+    <h1>Set 2</h1>
+    <h2>Answer 3</h2>
+    <h3>The C code is :</h3>
+    <pre>
+    <code>
+      #include <stdio.h>
+
+      int main() {
+        int array[10] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+        for (int i = 0; i < 10; i++) {
+          printf("%d \n", array[i] * array[i]);
+        }
+        return 0;
+      }
+
+  </code>
+  </pre>
+    <h3>The python code is :</h3>
+    <pre>
+    <code>
+      a = [0,1,2,3,4,5,6,7,8,9]
+      print('\n'.join(str(x**2) for x in a))
+
+    </code>
+    </pre>
+
+
+
+    <h1>Set 3</h1>
+    <h2>Answer 1</h2>
+    <h3>The C code is :</h3>
+    <pre>
+    <code>
+    #include <stdio.h>
+    int main() {
+      int i, space, rows, k = 0, count = 0, count1 = 0;
+
+      printf("Enter number of rows: ");
+      scanf("%d", &rows);
+
+      for (i = 1; i <= rows; ++i) {
+        for (space = 1; space <= rows - i; ++space) {
+          printf("  ");
+          ++count;
+        }
+
+        while (k != 2 * i - 1) {
+          if (count <= rows - 1) {
+            printf("%d ", i + k);
+            ++count;
+          } else {
+            ++count1;
+            printf("%d ", (i + k - 2 * count1));
+          }
+          ++k;
+        }
+        count1 = count = k = 0;
+
+        printf("\n");
+      }
+      return 0;
+    }
+  </code>
+  </pre>
+    <h3>The python code is :</h3>
+    <pre>
+    <code>
+      n = int(input('Enter number of rows: '))
+      for i in range(1,n+1):
+
+          l = list(range(i,2*i))
+
+          print((n-i)* 2 *' ' + ' '.join(str(x) for x in l ) + ' ' + ' '.join(str(x) for x in l[-2::-1] ))
+
+    </code>
+    </pre>
+
+
+
+    <h1>Set 3</h1>
+    <h2>Answer 2</h2>
+    <h3>The C code is :</h3>
+    <pre>
+    <code>
+    #include <stdio.h>
+    int main() {
+      int n, i;
+
+      printf("Enter an integer: ");
+      scanf("%d", &n);
+
+      for (i = 1; i <= 10; ++i) {
+        printf("%d * %d = %d \n", n, i, n * i);
+      }
+
+      return 0;
+    }
+  </code>
+  </pre>
+    <h3>The python code is :</h3>
+    <pre>
+    <code>
+    n = int(input('Enter an integer : '))
+    for i in range(1,11):
+        print('{} * {} = {}'.format(n,i,i*n))
+
+    </code>
+    </pre>
+
+    <h1>Set 3</h1>
+    <h2>Answer 3</h2>
+    <h3>The C code is :</h3>
+    <pre>
+    <code>
+    #include <stdio.h>
+    int main() {
+      int n, reversedNumber = 0, remainder;
+
+      printf("Enter an integer: ");
+      scanf("%d", &n);
+
+      while (n != 0) {
+        remainder = n % 10;
+        reversedNumber = reversedNumber * 10 + remainder;
+        n /= 10;
+      }
+
+      printf("Reversed Number = %d", reversedNumber);
+
+      return 0;
+    }
+  </code>
+  </pre>
+    <h3>The python code is :</h3>
+    <pre>
+    <code>
+    n = input('Enter an intrger : ')
+    print("Reversed Number = {}".format(n[::-1]))
+
+    </code>
+    </pre>
+
+
+
+
+
+  </body>
+</html>
